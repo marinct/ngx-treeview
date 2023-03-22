@@ -122,10 +122,10 @@ export class TreeviewComponent implements OnChanges, OnInit {
       }
     });
 
-    if (!dontRaiseSelectedChange) this.raiseSelectedChange();
+    if (!dontRaiseSelectedChange) { this.raiseSelectedChange(); }
   }
 
-  unCheckAllItems() {
+  unCheckAllItems(): void {
     this.items.forEach((item) => {
       item.setCheckedRecursive(false);
     });
